@@ -1,0 +1,147 @@
+
+:root {
+    --title-section-font:3.2rem;
+    --size-font-menu:1.5rem;
+    --size-font-normal:1.4rem;
+    --size-font-big:1.8rem;
+    --medium-font-weight:500;
+    --semi-font-weight:600;
+    --line-height-p:2rem;
+    
+    --theme-color: 32;
+    
+    --first-color: hsl(var(--theme-color),87%,37%);
+    --title-color:hsl(var(--theme-color),8%,15%);
+    --text-color:hsl(var(--theme-color),8%,45%);
+    --title-color-light:hsl(var(--theme-color),8%,65%);
+    --input-color:hsl(var(--theme-color),70%,96%);
+    --label-button:hsl(var(--theme-color),100%,100%);
+    --background-color:hsl(var(--theme-color),60%,100%);
+    --high-contrast:hsl(var(--theme-color),100%,100%);
+    --shadow-color:hsl(var(--theme-color),10%,90%);
+    
+    --second-color-theme : 344;
+    
+    
+    --second-color : hsl(var(--second-color-theme),79%,58%)
+    }
+
+
+
+
+
+
+
+
+
+.descrizione__servizio  .col.--right {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.descrizione__servizio .title-section {
+    text-align: left;
+    margin-bottom: 4.5rem;
+}
+
+.descrizione__servizio picture img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.descrizione__servizio picture {
+   border: 3px solid #fff ;
+   border-radius: 50%;
+   width: 40rem;
+   height: 40rem;
+   -webkit-box-shadow: 2px 3px 13px -1px rgba(0,0,0,0.6);
+   box-shadow: 2px 3px 13px -1px rgba(0,0,0,0.6);
+}
+
+@media screen and (max-width: 992px) {
+    .descrizione__servizio picture {
+        max-width: 60rem;
+        max-height: auto;
+    }
+.descrizione__servizio picture img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+}
+
+
+@media screen and (max-width: 500px) {
+    .descrizione__servizio picture {
+        max-width: 30rem;
+        max-height: 30rem;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .descrizione__servizio  .col.--right {
+        margin-bottom: 3rem;
+    }
+}
+
+
+.descrizione__servizio  .col.--left span.strong {
+    font-weight: 800;
+}
+
+.descrizione__servizio  .col.--left span {
+    font-size: 1.6rem;
+    color: #333;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.descrizione__servizio .col {
+    width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+    .descrizione__servizio .col {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+  .descrizione__servizio .flex {
+    flex-direction:column-reverse
+  }
+}
+
+
+/* ! seconda descrizione servizio */
+
+
+section.chi-siamo.--servizio .container{
+    flex-direction: column;
+}
+
+
+section.chi-siamo.--servizio .container-2 {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+    section.chi-siamo.--servizio .container-2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+}
+
+section.chi-siamo .col.--right p {
+    font-weight: 500;
+}
+
+section.chi-siamo .calltoaction-2 {
+    margin:4rem 0 0 0
+}
+
