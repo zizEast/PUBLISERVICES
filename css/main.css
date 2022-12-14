@@ -659,17 +659,17 @@ header nav .nav-list li a.calltoaction {
 
 .servizi {
     background-color: #f6f6f6;
-    padding: 13rem 0;
     position: relative;
     z-index: 998;
 }
 
+
+
 .servizi .container {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     display:flex;
     flex-direction: column;
-    padding: 18rem 0rem;
 }
 
 
@@ -678,7 +678,6 @@ header nav .nav-list li a.calltoaction {
   .servizi .container {
     margin: 0 auto;
     flex-direction: row;
-    padding: 18rem 4rem;
     max-width: 145rem;
   }
 }
@@ -816,8 +815,7 @@ section.chi-siamo {
 }
 
 section.chi-siamo .container {
-    max-width: 90%;
-    padding: 18rem 0;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -830,7 +828,6 @@ section.chi-siamo .container {
 @media screen and (min-width: 992px) {
     section.chi-siamo .container {
         max-width:145rem;
-        padding: 18rem 4rem;
         flex-direction: row;
         align-items: center;
         flex-wrap: nowrap;
@@ -902,7 +899,6 @@ section.chi-siamo .col.--right p {
 
 section.soluzioni {
     background-color: #f6f6f6;
-    padding: 18rem 0;
 }
 
 section.soluzioni .title-section {
@@ -910,7 +906,7 @@ section.soluzioni .title-section {
 }
 
 section.soluzioni .container {
-    width: 90%;
+    max-width: 100%;
     margin:0 auto;
     display: flex;
     align-items: center;
@@ -919,7 +915,6 @@ section.soluzioni .container {
 
 @media screen and (min-width: 992px) {
     section.soluzioni .container {
-        padding: 0rem 4rem;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
@@ -1027,7 +1022,6 @@ section.portfolio {
     /* ! servizi spec */
 
     section.servizi-spec {
-        padding: 18rem 0; 
         color: #fff;
         background-color: var(--second-color);
     }
@@ -1038,18 +1032,18 @@ section.portfolio {
         display: flex;
         align-items: center;
         flex-direction : column ;
-        width: 90%;
-        padding: 0rem 0 0 0 ;
+        max-width: 100%;
     }
     
     @media screen and (min-width: 992px) {
         section.servizi-spec .container {
-            padding:0rem 4rem 0 4rem;
             max-width: 145rem;
             flex-direction: row;
             flex-wrap: wrap;
             align-items: flex-start;
             justify-content: space-between;
+            padding-right: 0;
+            padding-left: 0;
         }
     }
 
@@ -1096,7 +1090,7 @@ section.portfolio {
     }
 
     section.servizi-spec .grid {
-        width: 90%;
+        max-width: 90%;
         margin: 0 auto;
         display:flex ;
         flex-direction: column;
@@ -1105,7 +1099,6 @@ section.portfolio {
     @media screen and (min-width: 992px) {
         section.servizi-spec .grid {
             max-width: 145rem;
-            padding: 0 4rem;
             flex-direction: row;
         }
     }
@@ -1115,16 +1108,17 @@ section.portfolio {
 /* ! PERCHE NOI */
 
      section.perche-noi {
-        padding: 18rem 0 ;
         position: relative;
         background-image: linear-gradient(180deg,#ffffff 60%,#f7f7f7 60%);
-
+        padding-top: 9rem;
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
      }
 
 
-     @media screen and (min-width: 9928px) {
+     @media screen and (min-width: 992px) {
        section.perche-noi {
-        padding:18rem 4rem;
+        padding-top: 18rem;
        }
      }
 
@@ -1142,7 +1136,7 @@ section.portfolio {
      section.perche-noi  .cont-w {
         background-color: var(--first-color);
         margin: 0 auto;
-        width: 90%;
+        max-width: 100%;
         color: #fff;
         border-radius: 1rem;
         padding: 4rem;
@@ -1204,7 +1198,12 @@ section.portfolio {
 
      section.contact {
         background-color: #f6f6f6;
-        padding: 2rem 0 18rem 0;
+        padding-bottom:9rem
+     }
+     @media screen and (min-width: 768px) {
+       section.contact {
+        padding-bottom: 18rem;
+       }
      }
 
      section.contact h3 {
@@ -1219,13 +1218,13 @@ section.portfolio {
      }
 
      section.contact .container {
-        width: 90%;
+        max-width: 100%;
      }
 
      @media screen and (min-width: 992px) {
         section.contact .container  {
             max-width: 145rem;
-            padding: 0 4rem;
+            padding: 0;
         }
      }
 
@@ -1358,14 +1357,21 @@ section.portfolio {
      /* ! FOOTER */
 
      footer {
-        padding: 4rem 0 ;
+        padding: 4rem 2.5rem ;
         background-color: var(--second-color);
         color: #fff;
      }
 
+     @media screen and (min-width: 768px) {
+       footer {
+        padding:4rem 
+
+       }
+     }
+
      footer .container {
         display: flex;
-        flex-direction : column 
+        flex-direction : column ;
      }
 
      footer .container .row__footer {
@@ -1607,13 +1613,14 @@ a{color: coral}
 
 
 .container {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     position: relative;
 }
 @media screen and (min-width: 992px) {
     .container {
         max-width: 145rem;
+        padding: 0;
     }
 }
 
@@ -1623,7 +1630,7 @@ a{color: coral}
 
 @media screen and (max-width: 992px) {
   .p-section {
-    padding: 9rem 2rem;
+    padding: 9rem 2.5rem;
   }
 }
 

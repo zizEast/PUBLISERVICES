@@ -200,7 +200,6 @@ body.noScroll {
 /* ! descrizione */
 
 section.descrizione {
-    padding-right: 18rem 0;
     background-color: #f6f6f6;
 }
 
@@ -303,14 +302,13 @@ section.descrizione .cards-w .card-normal:first-child {
 
 section.valori {
     background-color: #fff;
-    padding: 18rem 0;
 }
 
 section.valori .container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     margin-top: 3rem;
 }
@@ -393,11 +391,11 @@ section.valori .container .col figure p {
     text-transform: uppercase;
 }
 
-
+/* ! perchè noi */
 
 section.perche-noi.--first {
     background-image: none;
-    padding: 18rem 0 ;
+    padding-top: 18rem;
 }
 
 
