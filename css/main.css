@@ -79,7 +79,7 @@ margin: 0;
         display: block;
         background-color: var(--second-color);
         color: #fff;
-        font-size: var(--size-font-normal);
+        font-size: 1.5rem;
         border-radius: 4px;
         line-height: normal;
         padding: 1rem;
@@ -87,12 +87,24 @@ margin: 0;
     
 }
 
+.card .calltoaction-2 {
+    margin-left: 0;
+}
+
+.servizi .card:hover .calltoaction-2 {
+    color: #fff;
+}
+
+.servizi .card:hover .icon-2::before {
+    color: #fff;
+}
+
 
 
 .title-section {
     font-size: 2.4rem;
     letter-spacing: 0;
-    color: #333;
+    color: #000;
     font-weight: 600;
     font-family: 'Exo 2', sans-serif;
     margin-bottom: 5rem;
@@ -172,7 +184,7 @@ margin: 0;
 }
 
 
-:root {
+ :root {
 --title-section-font:3.2rem;
 --size-font-menu:1.5rem;
 --size-font-normal:1.4rem;
@@ -197,8 +209,7 @@ margin: 0;
 
 
 --second-color : hsl(var(--second-color-theme),79%,58%)
-}
-
+} 
 
 
 
@@ -337,7 +348,7 @@ header .container .cover-cont h3 {
 }
 
 header .container .cover-cont p {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     margin-bottom: 4rem;
     color: #fff;
     text-align: center;
@@ -658,10 +669,10 @@ header nav .nav-list li a.calltoaction {
 
 @media screen and (min-width: 992px) {
     header nav .nav-list li a {
-        color: #333;
+        color: #000;
         font-weight: 600;
         line-height: normal;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -735,7 +746,7 @@ header nav .nav-list li a.calltoaction {
 }
 
 .servizi .container .col-1-mio p {
-    font-size: var(--size-font-normal);
+    font-size: 1.7rem;
     margin-bottom: 3rem;
     line-height: 2rem;
     font-weight: 700;
@@ -770,6 +781,7 @@ header nav .nav-list li a.calltoaction {
 }
 
 .container .card {
+    cursor: pointer;
     width: 100%;
     box-shadow: 2px 4px 8px 0px rgb(0 0 0 / 14%);
     transition: all .2s ease-in-out;
@@ -816,13 +828,14 @@ header nav .nav-list li a.calltoaction {
 }
 
  .container .card h3 {
-    color: #333;
-    font-size: 1.3rem;
+    color: #000;
+    font-size: 1.6rem;
     padding-bottom: 1rem;
 }
 
  .container .card p {
     padding-bottom: 1.6rem;
+    font-size: 1.5rem;
 }
 
 
@@ -904,7 +917,7 @@ section.chi-siamo .col.--right h1 {
 }
 
 section.chi-siamo .col.--right h3 {
-    color: #333;
+    color: #000;
     font-weight: 900;
     font-size: 1.8rem;
     margin-bottom: .6rem;
@@ -914,7 +927,7 @@ section.chi-siamo .col.--right p {
     margin-bottom: 1.6rem;
     font-size: 1.6rem;
     font-weight: 700;
-    color: #333;
+    color: #000;
 }
 
 
@@ -960,6 +973,7 @@ border-radius: 0.8rem;
 @media screen and (max-width: 992px) {
   .solution-w {
     width: 100%;
+    font-size: 1.6rem;
   }
 }
 
@@ -974,8 +988,9 @@ border-radius: 0.8rem;
 
 .solution-w button span {
     width: 80%;
-    color: #333;
+    color: #000;
     font-weight: 600;
+    font-size: 1.6rem;
     text-transform: uppercase;
 }
 
@@ -996,6 +1011,10 @@ border-radius: 0.8rem;
 }
 .solution-w button.--active .fa-solid {
     transform: rotate(90deg);
+}
+
+.solution-cont.col-100 {
+    font-size: 1.6rem;
 }
 
 
@@ -1079,7 +1098,7 @@ section.portfolio {
     }
 
     section.servizi-spec .container .solution-w .solution-cont {
-        color: #333;
+        color: #000;
     }
 
     @media screen and (max-width: 992px) {
@@ -1104,8 +1123,9 @@ section.portfolio {
     }
 
     section.servizi-spec .grid .col-50 p {
-        line-height: 1.5rem;
-        font-weight: 600;
+        line-height: 1.8rem;
+        font-size: 1.6rem;
+        font-weight: 500;
     }
 
     @media screen and (max-width: 992px) {
@@ -1267,7 +1287,7 @@ section.portfolio {
         border: none;
         outline: none;
         border:1px solid rgb(221, 221, 221);
-        color: #333;
+        color: #000;
         padding: 9px 12px;
         border-radius: 3px;
         font-size: 1.2rem;
