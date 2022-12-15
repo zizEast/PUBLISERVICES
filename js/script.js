@@ -5,7 +5,6 @@ const header =document.querySelector('.header')
 console.log(header);
 
 document.addEventListener('scroll' , () => {
-    console.log('ok');
     if(document.documentElement.scrollTop > 0) {
         console.log('ok');
         header.classList.add('--fixed')
@@ -21,14 +20,14 @@ document.addEventListener('scroll' , () => {
 
 const btnMenu = document.querySelector ('.icon')
 const navList = document.querySelector ('.header .nav-list')
-
+var page = document.getElementById('html')
 const aTag=document.querySelectorAll('a')
 
 
 btnMenu.addEventListener ('click' , () => {
     btnMenu.classList.toggle ('--active')
     navList.classList.toggle('--active')
-    document.body.classList.toggle('noScroll')
+    page.classList.toggle('noScroll')
 })
 
 
