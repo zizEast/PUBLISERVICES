@@ -12,7 +12,6 @@ document.addEventListener('scroll' , () => {
     }
 })
 
-
 /*  -----------------------------------------------------------------------------------------------
   menu active
 --------------------------------------------------------------------------------------------------- */
@@ -78,7 +77,6 @@ solutionBtns.forEach(btn => {
 
 
 
-
 /*  -----------------------------------------------------------------------------------------------
   carousel loghi
 --------------------------------------------------------------------------------------------------- */
@@ -128,3 +126,36 @@ document.addEventListener('scroll' , () => {
       logoBtn.classList.remove('--show')
   }
 })
+
+
+
+
+/*  -----------------------------------------------------------------------------------------------
+  touch a descrizione su cellulare
+--------------------------------------------------------------------------------------------------- */
+
+const portfolios= document.querySelectorAll('.img-cont')
+const descrizione= document.querySelector('.description__azienda')
+var activeDescription = document.querySelector('.description__azienda.--show')
+
+const descriptionActive =  () => {
+  activeDescription.classList.remove('--show')
+  descrizione.classList.add('--show')
+  activeDescription=descrizione
+}
+
+const descriptionReset = () => {
+  descrizione.classList.remove('--show')
+  console.log('remove');
+}
+
+portfolios.forEach( portfolio => {
+  portfolio.addEventListener('touchstart' , descriptionActive)
+  portfolio.addEventListener('touchend', descriptionReset)
+})
+
+
+
+
+
+

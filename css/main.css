@@ -1072,6 +1072,20 @@ border-radius: 0.8rem;
 
 section.portfolio {
     height: auto;
+    background-color:#ffffff;
+}
+
+section.portfolio h2 {
+    display: none;
+    padding:18rem 0 4rem 0;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+  section.portfolio h2 {
+    display: block;
+    padding: 9rem 0 4rem 0;
+  }
 }
 
     section.portfolio .container {
@@ -1145,10 +1159,15 @@ section.portfolio {
         z-index: 1001;
         color: #fff;
     }
+    section.portfolio .img-cont .description__azienda.--show {
+        opacity: 1;
+    }
 
     section.portfolio .img-cont:hover .description__azienda {
         opacity: 1;
     }
+
+
 
 
 
@@ -1324,13 +1343,19 @@ transform: rotate(180deg);
 
     section.portfolio .img-cont .--logo {
         position: absolute;
-        max-width: 35rem;
+        max-width: 25rem;
         height: auto;
         z-index: 999;
         transform: translate(-50% , -50%);
         top: 50%;
         left: 50%;
     }
+@media screen and (max-width: 768px) {
+    section.portfolio .img-cont .--logo {
+        max-width: 10rem;
+    }
+}
+
     section.portfolio .img-cont .--logo img {
         object-fit:contain;
     }
