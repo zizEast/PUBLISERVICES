@@ -6,7 +6,6 @@ console.log(header);
 
 document.addEventListener('scroll' , () => {
     if(document.documentElement.scrollTop > 0) {
-        console.log('ok');
         header.classList.add('--fixed')
     } else {
         header.classList.remove('--fixed')
@@ -74,3 +73,58 @@ solutionBtns.forEach(btn => {
   re-Captcha
 --------------------------------------------------------------------------------------------------- */
 
+
+
+
+
+
+
+/*  -----------------------------------------------------------------------------------------------
+  carousel loghi
+--------------------------------------------------------------------------------------------------- */
+
+/*  -----------------------------------------------------------------------------------------------
+ COVER-CAROUSEL
+--------------------------------------------------------------------------------------------------- */
+const coverCarousel=document.querySelector('.carousel')
+new Glide(coverCarousel, {
+type:"carousel",
+ gap:0,
+startAt:1,
+ perView:5,
+breakpoints: {
+1300: {
+perView: 4
+},
+960: {
+perView: 3
+},
+700: {
+  perView: 2
+  },
+  430: {
+    perView: 1
+    },
+},
+
+autoplay:200,
+ hoverpause:true,
+ animationDuration:1000
+}).mount()
+
+
+
+
+/*  -----------------------------------------------------------------------------------------------
+  logo on scroll
+--------------------------------------------------------------------------------------------------- */
+
+const logoBtn = document.querySelector('.whatsapp-w')
+
+document.addEventListener('scroll' , () => {
+  if(document.documentElement.scrollTop > 30) {
+      logoBtn.classList.add('--show')
+  } else {
+      logoBtn.classList.remove('--show')
+  }
+})

@@ -229,7 +229,6 @@ header{
     background-position: center;
     background-size: cover;
     position: relative;
-    margin-top: -5rem;
 }
 
 
@@ -1094,17 +1093,240 @@ section.portfolio {
             flex-direction: row;
             width: 100%;
         }
-        section.portfolio .--end .img-cont-2 {
+        section.portfolio .--end .img-cont {
             width: 50%;
+            height: 100%;
         }
     }
 
     section.portfolio .img-cont {
         width: 100%;
-        height:55rem;
+        max-height:55rem;
         position: relative;
         overflow: hidden;
-        background: var(--second-color);
+        height: auto;
+    }
+
+    section.portfolio .container .img-cont::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        z-index: 998;
+        opacity: 0.26;
+        height: 100%;
+    }
+
+    section.portfolio .img-cont .description__azienda {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--second-color);
+        z-index: 1000;
+        opacity: 0;
+        transition: all .6s ease-in-out;
+        cursor: pointer;
+    }
+    section.portfolio .img-cont .description__azienda .text-1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        z-index: 1001;
+        color: #fff;
+    }
+
+    section.portfolio .img-cont:hover .description__azienda {
+        opacity: 1;
+    }
+
+
+
+
+/* ! carousel-glide */
+
+
+    section.portfolio .carousel {
+        background-color: #f7f7f7;
+        height: 45rem;
+        display: flex;
+        align-items: center;
+    }
+
+    section.portfolio .carousel .img-cont {
+        max-width:16rem ;
+        display: flex;
+        justify-content: center;
+    }
+
+    section.portfolio .carousel .glide__slide {
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+
+
+ /* ! bullets carousel */
+.glide__bullets {
+width: 100%;
+display: none;
+align-items: center;
+position: absolute;
+bottom: 10%;
+left:0;
+align-items:center;
+justify-content:center;
+}
+button.glide__bullet {
+width: 0.9rem;
+height: 0.9rem;
+display: block;
+background-color: #ffcad8;
+border-radius: 50%;
+text-align: center;
+outline: none;
+border: none;
+}
+button.glide__bullet:not(:last-child) {
+margin-right: 0.8rem;
+}
+button.glide__bullet--active,
+button.glide__bullet:hover {
+background-color: var(--second-color);
+}
+.-rotate {
+transform: rotate(180deg);
+}
+
+
+    @media screen and (max-width: 430px) {
+        section.portfolio .glide__bullets {
+            display: flex;
+        }
+    }
+
+
+
+
+
+/* ! animazione testo descrizione nome azienda */
+
+    .text-1 {
+        font-size: 3rem;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+      }
+      @media screen and (max-width: 768px) {
+        .text-1 {
+            font-size: 1.6rem;
+        }
+      }
+      .text-1 > span {
+        color: #fff;
+        animation: text1 1s ease-out infinite;
+        -webkit-animation: text1 0.8s ease-out infinite;
+
+      }
+
+
+      .text-1 > span:nth-child(0) {
+        animation-delay: 0.1s;
+   }
+    .text-1 > span:nth-child(1) {
+        animation-delay: 0.2s;
+   }
+    .text-1 > span:nth-child(2) {
+        animation-delay: 0.3s;
+   }
+    .text-1 > span:nth-child(3) {
+        animation-delay: 0.4s;
+   }
+    .text-1 > span:nth-child(4) {
+        animation-delay: 0.5s;
+   }
+   .text-1 > span:nth-child(5) {
+    animation-delay: 0.6s;
+}
+.text-1 > span:nth-child(6) {
+    animation-delay: 0.7s;
+}
+.text-1 > span:nth-child(7) {
+    animation-delay: 0.8s;
+}
+.text-1 > span:nth-child(8) {
+    animation-delay: 0.9s;
+}
+.text-1 > span:nth-child(9) {
+    animation-delay: 1s;
+}
+    
+
+
+
+      @keyframes text1 {
+        0% {
+          text-shadow: 0 0 100px#576199;
+          opacity: 0;
+        }
+        5% {
+          text-shadow: 0 0 90px #333c5f;
+        }
+        15% {
+          opacity: 1;
+        }
+        20% {
+          text-shadow: 0 0 0px#333c5f;
+        }
+        80% {
+          text-shadow: 0 0 0px#333c5f;
+        }
+        85% {
+          opacity: 1;
+        }
+        95% {
+          text-shadow: 0 0 90px #333c5f;
+        }
+        100% {
+          text-shadow: 0 0 100px #576199;
+          opacity: 0;
+        }
+      }
+      
+
+
+
+
+
+
+
+    section.portfolio .back-img {
+        position: relative;
+        z-index: 997;
+    }
+
+    section.portfolio .img-cont {
+        height: 100%;
+        position: relative;
+    }
+
+    section.portfolio .img-cont .--logo {
+        position: absolute;
+        max-width: 35rem;
+        height: auto;
+        z-index: 999;
+        transform: translate(-50% , -50%);
+        top: 50%;
+        left: 50%;
+    }
+    section.portfolio .img-cont .--logo img {
+        object-fit:contain;
     }
 
 
@@ -1123,7 +1345,7 @@ section.portfolio {
     }
   
     section.portfolio .img-cont.--double {
-    height: 110rem;        
+    max-height: 110rem;        
     }
 
 
@@ -1850,4 +2072,37 @@ a .card {
 
 p {
     line-height: 2.6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.whatsapp-w {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    z-index: 11000;
+    transition: .5s;
+    opacity: 0;
+}
+
+
+@media screen and (max-width: 992px) {
+  .whatsapp-w {
+    opacity: 0;
+  }
+  .whatsapp-w.--show {
+    display: block;
+    opacity: 1;
+  }
 }
