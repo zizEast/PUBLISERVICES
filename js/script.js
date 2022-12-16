@@ -133,28 +133,51 @@ document.addEventListener('scroll' , () => {
 /*  -----------------------------------------------------------------------------------------------
   touch a descrizione su cellulare
 --------------------------------------------------------------------------------------------------- */
-
-const portfolios= document.querySelectorAll('.img-cont')
+const portfolioWrapper =document.querySelector('section.portfolio')
+const portfolios= document.querySelectorAll('.portfolio .container .img-cont')
 const descrizione= document.querySelector('.description__azienda')
 var activeDescription = document.querySelector('.description__azienda.--show')
 
 const descriptionActive =  () => {
-  activeDescription.classList.remove('--show')
-  descrizione.classList.add('--show')
-  activeDescription=descrizione
+  console.log('TOUCH');
 }
 
 const descriptionReset = () => {
-  descrizione.classList.remove('--show')
-  console.log('remove');
+
 }
 
+
 portfolios.forEach( portfolio => {
-  portfolio.addEventListener('touchstart' , descriptionActive)
-  portfolio.addEventListener('touchend', descriptionReset)
+  var description = portfolio.children[2]
+  portfolio.addEventListener('touchstart' ,() => {
+    activeDescription.classList.remove('--show')
+    description.classList.add('--show')
+  })
+
+  portfolio.addEventListener('mousemove',() => {
+    activeDescription.classList.remove('--show')
+    description.classList.add('--show')
+    activeDescription=description
+  })
+
+  portfolio.addEventListener('touchend', () => {
+  })
 })
 
 
+
+// document.addEventListener('scroll' , () => {
+//   console.log(portfolioWrapper.getBoundingClientRect().top);
+//    var distanzaPortfolio = portfolioWrapper.getBoundingClientRect().top
+
+//    if (distanzaPortfolio > 1200 || distanzaPortfolio > -946) {
+//     activeDescription.classList.remove('--show')
+//     portfolios[0].children[2].classList.add('--show')
+
+//    }else {
+//     portfolios[0].children[2].classList.remove('--show')
+//    }
+// })
 
 
 

@@ -983,7 +983,12 @@ section.chi-siamo .col.--right p {
 
 section.soluzioni {
     background-color: #f6f6f6;
+    box-shadow: 7px -28px 8px 36px #f7f7f7;
+    z-index: 999;
+    position: relative;
 }
+
+
 
 section.soluzioni .title-section {
     text-align: center;
@@ -1071,6 +1076,8 @@ border-radius: 0.8rem;
 
 
 section.portfolio {
+    z-index: 998;
+    position: relative;
     height: auto;
     background-color:#ffffff;
 }
@@ -1081,12 +1088,7 @@ section.portfolio h2 {
     margin-bottom: 0;
 }
 
-@media screen and (max-width: 992px) {
-  section.portfolio h2 {
-    display: block;
-    padding: 9rem 0 4rem 0;
-  }
-}
+
 
     section.portfolio .container {
         display: flex;
@@ -1096,7 +1098,39 @@ section.portfolio h2 {
         padding: 0;
         flex-wrap: wrap;
         max-width: 100%;
+        position: relative;
     }
+
+    @media screen and (min-width: 450px) {
+      
+    section.portfolio .container::before {
+        position: absolute;
+        content: "";
+        bottom: -70px;
+        left: 0;
+        width: 100%;
+        height: 4rem;
+        z-index: 1200;
+        box-shadow: 7px -7px 13px 36px #f7f7f7
+    }
+    }
+
+    @media screen and (max-width: 450px) {
+        section.portfolio .container::before {
+            transition: .4s;
+            content: "";
+            bottom: 0;
+            left: -100vw;
+            position: absolute;
+            width: 300vw;
+            height: 10rem;
+        background-color: #f7f7f7;        
+        transform: rotate(347deg) translateY(45px);
+        z-index: 1100;
+        }
+    
+    }
+
 
     section.portfolio .container .col1 {
         width:33.333%;
@@ -1139,6 +1173,17 @@ section.portfolio h2 {
         height: 100%;
     }
 
+    section.portfolio .img-cont .description__azienda .text-1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        z-index: 1001;
+        color: #fff;
+    }
+
+
+    
     section.portfolio .img-cont .description__azienda {
         position: absolute;
         left: 0;
@@ -1151,21 +1196,17 @@ section.portfolio h2 {
         transition: all .6s ease-in-out;
         cursor: pointer;
     }
-    section.portfolio .img-cont .description__azienda .text-1 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50% , -50%);
-        z-index: 1001;
-        color: #fff;
-    }
     section.portfolio .img-cont .description__azienda.--show {
         opacity: 1;
-    }
+    } 
+/* 
+    @media only screen and (max-width:600px)  {
+        section.portfolio .img-cont .description__azienda.--show {
+            opacity: 1;
+        }
+    } */
 
-    section.portfolio .img-cont:hover .description__azienda {
-        opacity: 1;
-    }
+
 
 
 
@@ -1180,6 +1221,8 @@ section.portfolio h2 {
         height: 45rem;
         display: flex;
         align-items: center;
+        box-shadow: 7px -15px 11px 36px #F7F7F7;
+      
     }
 
     section.portfolio .carousel .img-cont {
