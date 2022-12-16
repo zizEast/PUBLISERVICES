@@ -225,7 +225,7 @@ header{
     height: 60vh;
     width: 100%;
     position: relative;
-    background:linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,1)),  url('../assets/immagini/index.jpg');
+    background:linear-gradient(to bottom,rgba(0,0,0,0.25),rgba(0,0,0,1)),  url('../assets/immagini/index.jpg');
     background-position: center;
     background-size: cover;
     position: relative;
@@ -235,20 +235,20 @@ header{
 
 /* ! immagini ad header varie */
 header.--chi-siamo {
-    background:linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,1)),  url('../assets/immagini/chi-siamo.jpg');
+    background:linear-gradient(to bottom,rgba(0,0,0,0.25),rgba(0,0,0,1)),  url('../assets/immagini/chi-siamo.jpg');
     background-position: center;
     background-size: cover;
 }
 
 
 header.--servizi {
-    background:linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,1)),  url('../assets/immagini/service.jpg');
+    background:linear-gradient(to bottom,rgba(0,0,0,0.25),rgba(0,0,0,1)),  url('../assets/immagini/service.jpg');
     background-position: center;
     background-size: cover;
 }
 
 header.--vetrofanie {
-    background:linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,1)),  url('../assets/immagini/glass.jpg');
+    background:linear-gradient(to bottom,rgba(0,0,0,0.25),rgba(0,0,0,1)),  url('../assets/immagini/glass.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -375,7 +375,7 @@ header .container .cover-cont .calltoaction-2 {
     background-color: var(--second-color);
     color: #fff;
     z-index: 0;
-    padding:6.4px 16px ;
+    padding:1.1rem 1.5rem ;
     font-size: 1.8rem;
     position: relative;
     box-shadow: 2px 4px 8px 0px rgba(0,0,0,0.14);
@@ -409,7 +409,7 @@ header .header {
     align-items: center;
     justify-content: space-between;
     padding: 0 4.5rem;
-    background-color: #fff;
+    background-color: transparent;
     height: 9rem;
     border-radius: 1rem;
     transition: transform 1s cubic-bezier(.215, .61, .355, 1);
@@ -426,6 +426,9 @@ header .header {
     max-width: 100%;
     border-radius: 0;
   }
+}
+header .header.--fixed {
+    background-color: rgba(255, 255, 255);
 }
 
 
@@ -525,12 +528,16 @@ header .nav-list {
     padding: 0;
     display: flex;
     overflow-y: hidden;
-    background-color: var(--first-color);
     background-position: center;
+    background-color: transparent;
     background-size: cover;
     align-items:center;
     justify-content:space-around;
     z-index: 999;
+}
+
+header .nav-list.--active {
+    background-color: var(--first-color);
 }
 
 @media screen and (max-width: 992px) {
@@ -626,7 +633,6 @@ header nav .nav-list .menu-cont-right a {
         position: initial;
         height: auto;
         padding: 0;
-        background-color: #fff;
     }
 
     header nav .nav-list .menu-cont-right {
@@ -675,14 +681,22 @@ header nav .nav-list li .sub-menu {
 }
 header nav .nav-list li a.calltoaction {
     color: #fff;
+    background-color: var(--first-color);
+}
+
+header .header.--fixed nav .nav-list li a.calltoaction {
+    color: #fff;
 }
 
 @media screen and (min-width: 992px) {
     header nav .nav-list li a {
-        color: #000;
+        color: #fff;
         font-weight: 600;
         line-height: normal;
         font-size: 1.6rem;
+    }
+    header .header.--fixed .nav-list li a {
+        color: #000;
     }
 }
 
@@ -1489,14 +1503,14 @@ section.portfolio {
      /* ! FOOTER */
 
      footer {
-        padding: 4rem 2.5rem ;
+        padding: 3.2rem 2.5rem ;
         background-color: var(--second-color);
         color: #fff;
      }
 
      @media screen and (min-width: 768px) {
        footer {
-        padding:4rem 
+         padding:7rem 4rem;
 
        }
      }
