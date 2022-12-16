@@ -229,6 +229,12 @@ header{
     background-position: center;
     background-size: cover;
     position: relative;
+    margin-top: -5rem;
+}
+@media screen and (max-width: 992px) {
+  header {
+    margin-top: 0;
+  }
 }
 
 
