@@ -217,7 +217,8 @@ section.descrizione .chi {
 section.descrizione .chi h2 {
     text-align: center;
     color: #fff;
-    padding: 4rem 0 ;
+    padding: 2rem 0 ;
+    box-shadow: 2px 2px 10px 0px rgb(0 0 0 / 50%);
 }
 
 section.descrizione .chi p {
@@ -279,9 +280,9 @@ section.descrizione .card-normal {
     background-color: #fff;
     color: #333;
     padding: 2rem;
-    border-radius: 0.8rem;
+    border-radius: 1rem;
     margin-bottom: 3rem;
-    box-shadow: 2px 4px 8px 0px rgb(0 0 0 / 14%);
+    box-shadow: 2px 2px 10px 0px rgb(0 0 0 / 50%);
 }
 
 section.descrizione .cards-w .card-normal:first-child {
@@ -396,6 +397,11 @@ section.valori .container .col figure p {
 section.perche-noi.--first {
     background-image: none;
     padding-top: 18rem;
+}
+@media screen and (max-width: 992px) {
+  section.perche-noi.--first {
+    padding-top: 9rem;
+  }
 }
 
 
