@@ -199,6 +199,9 @@ body.noScroll {
 
 /* ! descrizione */
 
+
+
+
 section.descrizione {
     background-color: #f6f6f6;
 }
@@ -288,9 +291,6 @@ section.descrizione .card-normal {
 section.descrizione .cards-w .card-normal:first-child {
     margin-top: 3rem;
 }
-
-
-
 
 
 
@@ -547,3 +547,21 @@ a{color: coral}
     margin-bottom:40px
   }
 }
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1220px) and (min-width:1055px) {
+    section.descrizione .chi.--chiSiamo h2 {
+        margin-top: 27px
+    ;
+} 
+
+}
+

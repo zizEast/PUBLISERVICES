@@ -26,6 +26,7 @@ btnMenu.addEventListener ('click' , () => {
     btnMenu.classList.toggle ('--active')
     navList.classList.toggle('--active')
     page.classList.toggle('noScroll')
+    navList.classList.toggle('noScroll')
 })
 
 
@@ -181,4 +182,14 @@ portfolios.forEach( portfolio => {
 
 
 
+/*  -----------------------------------------------------------------------------------------------
+  RESIZE EVENT FOR MENU
+--------------------------------------------------------------------------------------------------- */
 
+
+window.addEventListener('resize' , () => {
+  if(window.innerWidth > 992) {
+      navList.classList.remove('--active')
+      btnMenu.classList.remove('--active')
+  }
+})
