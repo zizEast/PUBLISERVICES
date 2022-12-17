@@ -385,40 +385,61 @@
         <section class="contact spot-light p-section">
             <h3 class="title-section text-center" style="width:90% ; margin-left :auto;margin-right: auto;">CONTATTACI ORA</h3>
             <p class="text-center mb-3" style="width:90%; margin-left :auto;margin-right: auto;">
-                Parlaci del tuo nuovo progetto web
+                Se pensi che possiamo essere il partner corretto per la tua azienda, compila il form.
             </p>
             <div class="container">
                 <form action="" method="post" class="form">
-                    <div class="form-field --name">
-                      <label for="name" class="name"></label>
-                      <input type="text" name="name" class="name" placeholder="Nome*">
+                    <div class="nome-w w-100 flex">
+                        <div class="form-field --name">
+                            <label for="name" class="name">nome e cognome</label>
+                            <input type="text" name="name" class="name">
+                          </div>
+                          <div class="form-field --email">
+                            <label for="email" class="email">email</label>
+                            <input type="email" name="email" class="email">
+                          </div>
                     </div>
-                    <div class="form-field --email">
-                      <label for="email" class="email"></label>
-                      <input type="email" name="email" class="email" placeholder="Email*">
-                    </div>
-                    <div class="form-field --number">
-                        <label for="number" class="number"></label>
-                        <input type="number" name="number" class="number" placeholder="Telefono*">
-                      </div>
-                    <div class="form-field --intersted">
-                      <label for="intersted" class="intersted"></label>
-                      <input type="text" name="intersted" class="intersted" placeholder="A cosa sei interessato?*">
+                    <div class="investimenti-w w-100">
+                        <p>Quanti investimenti in campagne pubblicitarie</p>
+                         <div class="grid-33 w-100">
+                            <label class="form-field --investimenti">
+                                <i class="fa-solid fa-euro-sign"></i>
+                                <span>5.000 - 10.000 $</span>
+                                <input type="radio" name="radio-993" value="5.000 - 10.000 €" checked="checked" tabindex="">
+                            </label>
+                            <label class="form-field --investimenti">
+                                <div class="fa-w">
+                                    <i class="fa-solid fa-euro-sign"></i>
+                                    <i class="fa-solid fa-euro-sign"></i>
+                                </div>
+                                <span>10.000 - 20.000 $</span>
+                                <input type="radio" name="radio-993" value="10.000 - 20.000 €" tabindex="">
+                            </label>
+                            <label class="form-field --investimenti">
+                                <div class="fa-w">
+                                    <i class="fa-solid fa-euro-sign"></i>
+                                    <i class="fa-solid fa-euro-sign"></i>
+                                    <i class="fa-solid fa-euro-sign"></i>
+                                </div>
+                                <span>20.000 $ +</span>
+                                <input type="radio" name="radio-993" value="20.000€ +" tabindex="">
+                            </label>
+                        </div>
                     </div>
                     <div class="form-field">
-                      <label for="messaggio" class="messaggio"></label>
-                      <textarea name="messaggio"  cols="10" rows="10" placeholder="Messaggio*" style="height: 6rem;"></textarea>
+                      <label for="messaggio" class="messaggio"> Parlami del tuo progetto e dei problemi che vorresti risolvere in modo dettagliato </label>
+                      <textarea name="messaggio"  cols="40" style="height: 6rem;"></textarea>
                     </div>
-                    <div class="form-field__terms">
+                    <div class="form-field__terms conditions">
                         <input type="checkbox" name="terms" id="terms">
                         <label for="terms">Ho letto ed accetto le modalità di trattamento dei dati descritte nella Privacy Policy</label>
                     </div>
                     <div class="form-field">
                           <!-- добавление элемента div -->
-                        <div class="g-recaptcha rc-anchor-invisible-text" data-sitekey="your-key" ></div>
-                      
+                        <div class="g-recaptcha" data-sitekey="your-key"></div>
+
                         <!-- элемент для вывода ошибок -->
-                        <div class="text-danger rc-anchor-invisible-text" id="recaptchaError"></div>
+                        <div class="text-danger" id="recaptchaError"></div>
                     </div>
                     <button type="submit">CONTATTACI ORA</button>
                   </form>
