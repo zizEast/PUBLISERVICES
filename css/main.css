@@ -450,18 +450,20 @@ header i[data-angleCover] {
     }
 }
 
+
+
+
 header .header {
     position: fixed;
     max-width: 147rem;
     width: 100%;
-    z-index: 10000;
+    z-index: 1000000;
     left: 50%;
     top: 3rem;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 4.5rem;
     background-color: transparent;
     height: 9rem;
     border-radius: 1rem;
@@ -470,12 +472,20 @@ header .header {
     /* transition: transform 0.2s ease-in-out;
     transition: max-width 0.4s ease-in-out; */
 }
+
+@media screen and (max-width: 1580px) {
+    header .header {
+        padding: 0 4rem;
+    }
+}
+
+
 @media screen and (max-width: 992px) {
   header .header {
     top: 0;
     left: 0;
-    padding: 0 3rem;
     transform: translateX(0);
+    padding: 0 1.5rem;
     max-width: 100%;
     border-radius: 0;
   }
@@ -1746,7 +1756,7 @@ transform: rotate(180deg);
 
      @media screen and (min-width: 992px) {
         section.contact .container  {
-            max-width: 100rem;
+            max-width: 85rem;
             padding: 10rem 4.25rem 6.5rem 4.25rem;
             border-radius: 2rem;
         }
@@ -2325,4 +2335,8 @@ p {
     display: block;
     opacity: 1;
   }
+}
+
+section {
+    z-index: 0;
 }
