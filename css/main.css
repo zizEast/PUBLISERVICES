@@ -195,7 +195,6 @@ margin: 0;
 --line-height-p:2rem;
 
 --theme-color: 32;
-
 --first-color: hsl(var(--theme-color),87%,37%);
 --title-color:hsl(var(--theme-color),8%,15%);
 --text-color:hsl(var(--theme-color),8%,45%);
@@ -209,7 +208,9 @@ margin: 0;
 --second-color-theme : 344;
 
 
---second-color : hsl(var(--second-color-theme),79%,58%)
+--second-color : hsl(var(--second-color-theme),79%,58%);
+
+--offerteBtn : #b00c0c;
 } 
 
 
@@ -225,16 +226,28 @@ header{
     height: 53vh;
     width: 100%;
     position: relative;
-    background:linear-gradient(to bottom,rgba(0,0,0,0.25),rgba(0,0,0,1)),  url('../assets/immagini/index.jpg');
+    background:linear-gradient(92deg,rgba(176, 100, 12, 0.8)0%, rgba(176, 100, 12, 0.2)60%), url('../assets/immagini/back.jpg');
     background-position: center;
     background-size: cover;
     position: relative;
     margin-top: -5rem;
+    z-index: 995;
 }
 @media screen and (max-width: 992px) {
   header {
     margin-top: 0;
   }
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 994;
 }
 
 
@@ -274,7 +287,7 @@ header.--vetrofanie {
 }
 
 header .container {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -284,6 +297,7 @@ header .container {
 
 @media screen and (min-width: 600px) {
   header .container {
+    max-width: 145rem;
     margin: 5rem auto;
     justify-content: center;
   }
@@ -304,8 +318,7 @@ header .container .cover-cont {
 
 @media screen and (min-width: 992px) {
     header .container .cover-cont {
-        width: 50%;
-        margin-top: 4rem;
+        margin-top: 0rem;
     }
 }
 
@@ -339,8 +352,8 @@ header .container .cover-cont h1 {
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 2.5rem;
-    line-height: 4rem;
-    text-align: center;
+    line-height: 6rem;
+    text-align: left;
 }
 @media screen and (max-width: 600px) {
     header .container .cover-cont h1 {
@@ -367,7 +380,7 @@ header .container .cover-cont p {
     font-size: 1.6rem;
     margin-bottom: 4rem;
     color: #fff;
-    text-align: center;
+    text-align: left;
     font-weight: 600;
 }
 
@@ -387,19 +400,53 @@ header .container .cover-cont .calltoaction-2 {
     box-shadow: 2px 4px 8px 0px rgba(0,0,0,0.14);
     border-radius: 0.4rem;
     font-weight: 700;
+    margin: 0;
+    display: inline-block;
+    margin-top: 3.2rem;
+}
+header .container .cover-cont .calltoaction-2[data-left] {
+    margin-right: 2rem;
+    border: 2px solid var(--second-color);
+}
+header .container .cover-cont .calltoaction-2[data-right] {
+    background-color: #fff;
+    border: 2px solid var(--second-color);
+    color: var(--second-color);
 }
 header .container .cover-cont .calltoaction-2::before {
     display: none;
 }
 
 header .container .cover-cont .calltoaction-2:hover {
-    background-color: #fff;
-    color: var(--second-color);
+    transform: scale(1.1);
 }
+
+
 
 @media screen and (min-width: 600px) {
     header .container .cover-cont {
-        width: 50%;
+        width: 100%;
+    }
+}
+
+header i[data-angleCover] {
+    position: absolute;
+    left: 50%;
+    z-index: 2000;
+    bottom: 5rem;
+    transform: translateX(-50%);
+    color: var(--second-color);
+    font-size: 5rem;
+    animation: move 1s linear infinite;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
     }
 }
 
