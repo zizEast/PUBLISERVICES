@@ -507,6 +507,8 @@ header .header.--fixed {
     box-shadow: 6px 6px 18px 0px rgb(0 0 0 / 18%);
     max-width: 100%;
     border-radius: 0;
+    padding: 0 1.5rem;
+
 }
 
 .logo {
@@ -517,6 +519,11 @@ header .header.--fixed {
     header .logo {
         width: 14rem;
         position: relative;
+    }
+
+    header .header.--fixed {
+
+        padding: 0 4rem;
     }
 }
 
