@@ -103,7 +103,7 @@ margin: 0;
 
 
 .title-section {
-    font-size: 2.4rem;
+    font-size: 6.2rem;
     letter-spacing: 0;
     color: #000;
     font-weight: 600;
@@ -1703,33 +1703,52 @@ transform: rotate(180deg);
 
      section.contact {
         background-color: #f6f6f6;
-        padding-bottom:9rem
+        padding-bottom:9rem;
+        padding-bottom: 0;
      }
-     @media screen and (min-width: 768px) {
-       section.contact {
-        padding-bottom: 18rem;
-       }
+
+     
+
+
+     section.contact .form-field label {
+        font-family: 'Exo 2', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color:var(--second-color);
+        text-transform: uppercase;
+        margin-bottom: 1rem;
      }
+  
 
      section.contact h3 {
         margin-bottom: 1.3rem;
      }
 
-     section.contact p {
+     section.contact > p {
+        color: #333;
+        font-size: 1.6rem;
+
+     }
+
+     section.contact .container p {
         font-family: 'Exo 2', sans-serif;
         font-size: 1.7rem;
         font-weight: 600;
-        color: #000;
+        color: var(--second-color);
      }
 
      section.contact .container {
         max-width: 100%;
+        background-color: #e8406d1a;
+        padding: 10rem 1.25rem 6.5rem 1.25rem;
+        border-radius: 2rem;
      }
 
      @media screen and (min-width: 992px) {
         section.contact .container  {
-            max-width: 145rem;
-            padding: 0;
+            max-width: 100rem;
+            padding: 10rem 4.25rem 6.5rem 4.25rem;
+            border-radius: 2rem;
         }
      }
 
@@ -1745,11 +1764,11 @@ transform: rotate(180deg);
      section.contact .form textarea {
         border: none;
         outline: none;
-        border:1px solid rgb(221, 221, 221);
+        border:1px solid var(--second-color);
         color: #000;
-        padding: 13px 12px;
+        padding: 1.5rem;
         border-radius: 3px;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
      }
      section.contact .form input::placeholder,
      section.contact .form textarea::placeholder {
@@ -1762,6 +1781,11 @@ transform: rotate(180deg);
      section.contact .form input[type="number"]::-webkit-outer-spin-button {
         appearance: none;
         margin: 0;
+     }
+
+     section.contact .nome-w {
+        justify-content: space-between;
+        padding-bottom: 3.3rem;
      }
 
      section.contact .form .form-field {
@@ -1793,6 +1817,7 @@ transform: rotate(180deg);
         flex-direction: row;
         align-items: center;
         margin-bottom: 2rem;
+        padding-left: 3.3rem;
      }
      section.contact .form input[type="checkbox"] {
         appearance:none;
@@ -1846,8 +1871,13 @@ transform: rotate(180deg);
      .form-field__terms label {
         width: 100%;
         color: var(--second-color);
-        font-size: 1.6rem;
+        font-size: 1.3rem;
+        font-weight: 600;
      }
+     .form-field__terms.conditions {
+        padding-top: 2rem;
+     }
+
      .form button {
         width: 100%;
         padding: 1.4rem 2rem;
@@ -1858,6 +1888,15 @@ transform: rotate(180deg);
         border-radius: 0.5rem;
         border: none;
      }
+
+     section.contact .form textarea {
+        width: auto;
+        min-height: 30rem;
+     }
+
+     section.contact .investimenti-w .grid-33 {
+        padding-bottom: 2rem;
+     }
      
      .rc-anchor-invisible-text {
     color: #fff;
@@ -1867,7 +1906,7 @@ transform: rotate(180deg);
   section.contact .investimenti-w p {
     margin-bottom: 1rem;
     text-transform: uppercase;
-    color: var(--first-color);
+    color: var(--second-color);
   }
 
   section.contact .form .form-field.--investimenti {
@@ -1875,10 +1914,10 @@ transform: rotate(180deg);
     background-color: #fff;
     flex-direction: column;
     display: flex;
+    border: 1px solid var(--second-color);
     align-items: center;
     justify-content: center;
     padding: 3.5rem 1rem 2.3rem;
-    border: 1px solid rgb(221, 221, 221)
   }
 
   section.contact .form .form-field.--investimenti  .fa-euro-sign {
@@ -1890,7 +1929,7 @@ transform: rotate(180deg);
 
   section.contact .form .form-field.--investimenti > span {
     margin-bottom: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
   }
 
