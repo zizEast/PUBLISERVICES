@@ -35,7 +35,6 @@ btnMenu.addEventListener ('click' , () => {
   scroll event
 --------------------------------------------------------------------------------------------------- */
 
-
 function revealFunction1 () {
     window.sr = ScrollReveal({duration:700 , distance:'200px',easing:'ease-out',opacity:0})
     sr.reveal('.reveal-left', {origin:'left',reset:true})
